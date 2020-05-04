@@ -24,5 +24,6 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Publish
-      run: dotnet publish src/Hello.Api/Hello.Api.csproj --configuration Release -o hello
-
+      run: dotnet publish src/Hello.Api/Hello.Api.csproj --configuration Release -o hello    
+    - name: Zip Folder
+      run: zip -r hello.zip hello
